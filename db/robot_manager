@@ -1,0 +1,43 @@
+---
+robots:
+- id: 1
+  name: Bender
+  city: Denver
+  state: Colorado
+  avatar: futurama
+  birthdate: 11/06/1996
+  date_hired: 29/03/2015
+  department: SpaceShips
+- id: 4
+  name: Ryan
+  city: Honolulu
+  state: Hawaii
+  avatar: computer guy
+  birthdate: 13/11/1992
+  date_hired: 09/08/2013
+  department: Tech Center
+- id: 5
+  name: Jonathan
+  city: New York
+  state: New York
+  avatar: kljnnlnljpj
+  birthdate: 23/04/1994
+  date_hired: 22/11/2012
+  department: Driver
+- id: 6
+  name: Chappie
+  city: Johannesburg
+  state: South Africa
+  avatar: Chappie the Robot
+  birthdate: 04/03/2015
+  date_hired: 03/06/2016
+  department: Police
+- id: 7
+  name: Sunny
+  city: Los Angeles
+  state: California
+  avatar: Will Smith
+  birthdate: 12/09/2000
+  date_hired: 21/07/2012
+  department: Relocation
+total: 11

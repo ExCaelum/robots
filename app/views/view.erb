@@ -1,0 +1,41 @@
+<div class="row text-center lead">
+  <h1>Profiles</h1>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <!-- <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+  </ol> -->
+
+  <div class="carousel-inner" role="listbox" style="interval: 100000;">
+    <div class="item active">
+      <div class="text-center">
+        <h2><a class="text-muted" href="/robots/<%= @robots.first.id %>"><%= @robots.first.name %></a></h2>
+        <a href="/robots/<%= @robots.first.id %>"><img class="center-block" src="https://robohash.org/<%= @robots.first.avatar %>.png">
+      </div>
+    </div>
+    <% @robots[1..-1].each_with_index do |robot, index| %>
+      <div class="item">
+         <div class="text-center">
+           <h2><a class="text-muted" href="/robots/<%= robot.id %>"><%= robot.name %></a></h2>
+         </div>
+         <a href="/robots/<%= robot.id %>"><img class="center-block" src="https://robohash.org/<%= robot.avatar %>.png">
+      </div>
+    <% end %>
+  </div>
+
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>

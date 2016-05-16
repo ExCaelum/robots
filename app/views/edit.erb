@@ -1,0 +1,26 @@
+<form action="/robots/<%= @robot.id %>" method="post">
+  <div class="row well form-group">
+    <div class="col-md-4 text-center">
+      <h2> Edit </h2>
+      <p><img src="https://robohash.org/<%= @robot.avatar %>.png"></p>
+    </div>
+    <div class="col-md-8">
+      <input class="form-control" type="hidden" name="_method" value="PUT">
+      <label for="name">Name:</label>
+      <input class="form-control" type="text" name="robot[name]" value="<%= @robot.name %>"><br/>
+      <label for="city">City:</label>
+      <input class="form-control" type="text" name="robot[city]" value="<%= @robot.city %>"><br/>
+      <label for="state">State:</label>
+      <input class="form-control" type="text" name="robot[state]" value="<%= @robot.state %>"><br/>
+      <label for="avatar">Avatar:</label>
+      <input class="form-control" type="text" name="robot[avatar]" value="<%= @robot.avatar %>"><br/>
+      <label for="birthdate">Birthday:</label>
+      <input class="form-control" type="text" name="robot[birthdate]" value="<%= @robot.birthdate %>"><br/>
+      <label for="date_hired">Hire Date:</label>
+      <input class="form-control" type="text" name="robot[date_hired]" value="<%= @robot.date_hired %>"><br/>
+      <label for="department">Department:</label>
+      <input class="form-control" type="text" name="robot[department]" value="<%= @robot.department %>"><br/>
+      <input class="btn-info" type="submit" value="Confirm">
+    </div>
+  </div>
+</form>
