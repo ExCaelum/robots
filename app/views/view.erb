@@ -4,13 +4,15 @@
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-  <!-- <ol class="carousel-indicators">
+  <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-    <li data-target="#myCarousel" data-slide-to="4"></li>
-  </ol> -->
+    <% num = @robots.count - 1
+       @count = 1
+       num.times do %>
+       <li data-target="#myCarousel" data-slide-to="@count"></li>
+       <% @count += 1 %>
+    <% end %>
+  </ol>
 
   <div class="carousel-inner" role="listbox" style="interval: 100000;">
     <div class="item active">
