@@ -53,4 +53,26 @@ class RobotManagerApp < Sinatra::Base
     @robot_manager ||= RobotManager.new(database)
   end
 
+  helpers do
+    def homepage
+      "<a href='/' class='navbar-brand'>Robot Factory</a>"
+    end
+
+    def profiles
+      "<a href='/robots/view'>Robot Profiles</a>"
+    end
+
+    def index
+      "<a href='/robots'>Robot Index</a>"
+    end
+
+    def new_robot
+      "<a href='/robots/new'>New Robot</a>"
+    end
+
+    def robot_page(robot, name, style="")
+      "<a class='#{style}' href='/robots/#{robot.id}'> <name> </a>"
+    end
+  end
+
 end
